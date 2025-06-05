@@ -76,10 +76,10 @@ public class Main {
                     conector.mostrarHistorial(idUsuarioActual);
                     break;
                 case 4:
-                    System.out.println("Saliendo del juego. ¡Hasta pronto!");
+                    System.out.println("Saliendo del juego.");
                     break;
                 default:
-                    System.out.println("Opción no válida. Intenta de nuevo.");
+                    System.out.println("Intenta de nuevo.");
             }
         } while (opcion != 4);
     }
