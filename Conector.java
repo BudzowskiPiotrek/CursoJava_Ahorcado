@@ -56,7 +56,7 @@ public class Conector {
     }
 
     public int login(String usuario, String contrasena) {
-        int idUsuario = -1; // -1 indica que no se encontró el usuario
+        int idUsuario = -1;
         conectar();
         if (conn != null) {
             String sql = "SELECT id, usuario, contraseña FROM usuario WHERE usuario = '" + usuario
@@ -67,12 +67,12 @@ public class Conector {
                     idUsuario = res.getInt("id");
                 }
             } catch (SQLException e) {
-                System.out.println("Error durante el login: " + e.getMessage());
+                System.out.println("Error");
             } finally {
                 desconectar();
             }
         } else {
-            System.out.println("La conexión está cerrada o no disponible.");
+            System.out.println("Error");
         }
         return idUsuario;
     }
@@ -114,7 +114,7 @@ public class Conector {
                 desconectar();
             }
         } else {
-            System.out.println("La conexión está cerrada o no disponible.");
+            System.out.println("Error");
         }
         return palabraObj;
     }
@@ -127,9 +127,9 @@ public class Conector {
                 + ", '" + palabra + "', " + completadaInt + ", '" + fechaActual + "', " + intentos + ")";
         int resultado = IngresarDatos(sql);
         if (resultado > 0) {
-            System.out.println("Historial de partida guardado con éxito.");
+            System.out.println("Historial de partida guardado");
         } else {
-            System.out.println("Error al guardar el historial de partida.");
+            System.out.println("Error al guardar");
         }
         return resultado;
     }
@@ -159,7 +159,7 @@ public class Conector {
                 }
                 System.out.println("-----------------------------\n");
             } catch (SQLException e) {
-                System.out.println("Error al mostrar historial: " + e.getMessage());
+                System.out.println("Error");
             } finally {
                 desconectar();
             }
