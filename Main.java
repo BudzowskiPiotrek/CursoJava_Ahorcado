@@ -13,7 +13,7 @@ public class Main {
         String usuarioStr;
         String contrasenaStr;
 
-        System.out.println("¡Bienvenido al Juego del Ahorcado!");
+        System.out.println("----Juego del Ahorcado----");
 
         String tieneCuenta = Basicos.leerCadena("¿Tienes ya una cuenta? (Si/No)");
 
@@ -23,7 +23,7 @@ public class Main {
             idUsuarioActual = conector.login(usuarioStr, contrasenaStr);
 
             if (idUsuarioActual != -1) {
-                System.out.println("¡Login exitoso! Bienvenido, " + usuarioStr + ".");
+                System.out.println("Bienvenido, " + usuarioStr);
                 menuJuego();
             } else {
                 System.out.println("Usuario o contraseña incorrectos. Saliendo de la aplicación...");
@@ -46,7 +46,7 @@ public class Main {
                 System.out.println("Saliendo de la aplicación...");
             }
         } else {
-            System.out.println("Opción no válida. Saliendo de la aplicación...");
+            System.out.println("No se te entiende! Saliendo de la aplicación...");
         }
     }
 
