@@ -16,3 +16,4 @@
   - Una vez terminada la partida, ya sea por victoria 🏆🎉 o derrota 💔😔, el resultado se registrará en la base de datos junto con la fecha y el número de intentos usados. 📅🔢
   - El jugador podrá consultar su historial de partidas 📈📊 para ver cuántas ha ganado, perdido, y qué palabras ha enfrentado. 📖🧐
 
+
